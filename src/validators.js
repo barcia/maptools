@@ -1,5 +1,5 @@
-import { GEOMETRY_TYPES, GEOJSON_TYPES } from './constants.js';
-import { isArray, isNumber } from './utils.js';
+import { GEOMETRY_TYPES, GEOJSON_TYPES } from '../lib/constants.js';
+import { isArray, isNumber } from '../lib/utils.js';
 
 const isValidPoint = (coords) => {
 	if (

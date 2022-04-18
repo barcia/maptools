@@ -1,4 +1,4 @@
-import { isGeometryType, isValidGeometry } from '../lib/validators.js';
+import { isGeometryType, isValidGeometry } from './validators.js';
 
 class Geometry {
 	constructor(type, coords) {
