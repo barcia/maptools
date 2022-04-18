@@ -1,16 +1,26 @@
 {
   "name": "maptools",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.1",
   "description": "A set of GeoJSON tools",
   "main": "build/index.js",
+  "homepage": "https://github.com/barcia/maptools#readme",
+  "bugs": "https://github.com/barcia/maptools/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/barcia/maptools.git"
+  },
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
     "docs": "documentation readme src/* --section=API",
     "bundle": "esbuild src/index.js --bundle --minify --format=esm --outfile=build/index.js",
-    "build": "npm run test && npm run docs && npm run bundle"
+    "build": "npm run test && npm run docs && npm run bundle",
+    "postpublish": "npm publish --ignore-scripts --registry='https://npm.pkg.github.com'"
   },
-  "keywords": [],
-  "author": "",
+  "files" : [
+    "build"
+  ],
+  "keywords": ["GeoJSON", "Carto", "Map"],
+  "author": "Iván Barcia <ivan@barcia.dev> (https://barcia.dev)",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
