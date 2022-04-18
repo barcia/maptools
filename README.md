@@ -2,9 +2,26 @@
 
 A set of GeoJSON tools
 
-[GeoJSON Specification](https://datatracker.ietf.org/doc/html/rfc7946#appendix-A.7)
+Read [GeoJSON Specification](https://datatracker.ietf.org/doc/html/rfc7946#appendix-A.7)
 
 ## Getting Started
+
+1.  Install the library:
+    ```shell
+    npm install maptools
+    ```
+
+2.  Import some utility in your JS code
+    ```javascript
+    import { Feature } from 'maptools'
+    ```
+
+3.  Create a new GeoJSON feature
+    ```javascript
+    const feature = new Feature('Point', [103.32, 34.21], { name: "Interesting point" })
+
+    const geojsonFeature = feature.toJSON()
+    ```
 
 ## API
 
