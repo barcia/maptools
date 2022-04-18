@@ -1,17 +1,21 @@
 {
   "name": "maptools",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A set of GeoJSON tools",
+  "main": "build/index.js",
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
-    "build": "node index.js"
+    "docs": "documentation readme src/* --section=API",
+    "bundle": "esbuild src/index.js --bundle --minify --format=esm --outfile=build/index.js",
+    "build": "npm run test && npm run docs && npm run bundle"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "documentation": "^13.2.5",
+    "esbuild": "^0.14.36",
     "jest": "^27.5.1"
   }
 }
