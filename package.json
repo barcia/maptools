@@ -1,5 +1,5 @@
 {
-  "name": "maptools",
+  "name": "@barcia/maptools",
   "version": "1.0.0-alpha.1",
   "description": "A set of GeoJSON tools",
   "main": "build/index.js",
